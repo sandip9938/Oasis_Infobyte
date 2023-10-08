@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        #inputTemp, #outputTemp {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #convertBtn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <input type="number" id="inputTemp" placeholder="Enter temperature">
+        <select id="tempUnit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+        </select>
+        <button id="convertBtn">Convert</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const convertBtn = document.getElementById('convertBtn');
+        const inputTemp = document.getElementById('inputTemp');
+        const tempUnit = document.getElementById('tempUnit');
+        const result = document.getElementById('result');
+
+        convertBtn.addEventListener('click', () => {
+            const temperature = parseFloat(inputTemp.value);
+            const unit = tempUnit.value;
+
+            if (isNaN(temperature)) {
+                result.textContent = "Please enter a valid temperature.";
+                return;
+            }
+
+            if (unit === 'celsius') {
+                const fahrenheit = (temperature * 9/5) + 32;
+                result.textContent = `${temperature}°C is ${fahrenheit.toFixed(2)}°F`;
+            } else if (unit === 'fahrenheit') {
+                const celsius = (temperature - 32) * 5/9;
+                result.textContent = `${temperature}°F is ${celsius.toFixed(2)}°C`;
+            }
+        });
+    </script>
+</body>
+</html>
