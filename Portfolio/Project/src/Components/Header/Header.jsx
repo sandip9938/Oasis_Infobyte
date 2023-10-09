@@ -12,41 +12,36 @@ function Header() {
             Sandip's
           </a>
           <div className={Toggle ? "nav_menu show-menu":"nav_menu"}>
-            <ul className="nav_list grid">
+            <ul className="nav_list">
               <li className="nav_item">
-                <a href="#home" className=" nav_link active_link">
+                <a href="#home" className="nav_link active_link">
                   <i className="uil uil-estate nav_icon"></i>
-                  Home</a>
+               Home </a>
               </li>
-
               <li className="nav_item">
                 <a href="#about" className="nav_link active_link">
                   <i className="uil uil-user nav_icon"></i>
-                  About</a>
+               About </a>
               </li>
-
               <li className="nav_item">
-                <a href="#skill" className=" nav_link active_link">
-                  <i className="uil uil-file nav_icon"></i>
-                  Skills</a>
+                <a href="#skill" className="nav_link active_link">
+                  <i className="uil uil-file-alt nav_icon"></i>
+               Skill </a>
               </li>
-
               <li className="nav_item">
-                <a href="#service" className=" nav_link active_link ">
-                  <i className="uil uil-briefcase nav_icon"></i>
-                  Services</a>
-              </li>
-
-              <li className="nav_item">
-                <a href="#portfolio" className=" nav_link active_link">
+                <a href="#portfolio" className="nav_link active_link">
                   <i className="uil uil-scenery nav_icon"></i>
-                  Portfolio</a>
+               Portfolio </a>
               </li>
-
               <li className="nav_item">
-                <a href="#contact" className=" nav_link active_link">
+                <a href="#service" className="nav_link active_link">
+                  <i className="uil uil-briefcase-alt nav_icon"></i>
+               Service </a>
+              </li>
+              <li className="nav_item">
+                <a href="#contact" className="nav_link active_link">
                   <i className="uil uil-message nav_icon"></i>
-                Contact</a>
+               Contact</a>
               </li>
             </ul>
             <i className="uil uil-times nav_icon nav_close" onClick={()=>showMenu(!Toggle)}></i>
