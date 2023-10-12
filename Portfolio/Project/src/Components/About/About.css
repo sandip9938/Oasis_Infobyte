@@ -1,0 +1,122 @@
+.about_container{
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    column-gap: 4rem;
+}
+.abou_img{
+    width: 350px;
+    border-radius: 1.5rem;
+    justify-self: center;
+    height: 400px;
+   
+}
+.about_info{
+    grid-template-columns: repeat(3,140px);
+    gap: 0.5rem;
+    margin-bottom: var(--mb-2);
+}
+.about_box{
+    background-color: var(--container-color);
+    border: 1px solid black;
+    border-radius: 0.75rem;
+    text-align: center;
+    padding: 1rem 1.25rem;
+}
+.about_tittle{
+    font-size:20px;
+    font-weight: 900;
+    text-align: center;
+  
+}
+.about_description{
+    padding: 0 4rem;
+    margin: 2rem;
+}
+.section_tittle{
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section_subtittle{
+    font-size: 25px;
+    font-weight: 700;
+ margin-left: 630px;
+
+}
+.about_data{
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 992px) {
+    .about_container{
+        grid-template-columns: 1fr ;
+        row-gap: 2.5rem;
+    }
+    .about_img img{
+        width: 220px;
+        height: 250px;
+    }
+    .c{
+        display: none;
+    }
+    .about_box{
+        padding: 0.75rem 0.5rem;
+    }
+    .about_data{
+        text-align: center;
+        margin-bottom: 2rem;
+    } 
+    .about_data p{
+        letter-spacing: 1px;
+    }
+
+    .about_info{
+        justify-content: center;
+    }
+    .section_subtittle{
+        margin-left: 290px;
+    }
+    .about_description{
+        padding: 0 5rem;
+        margin-bottom: 2rem;
+    }
+
+  }
+  
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+   
+    .c{
+        display: none;
+    }
+    img{
+        display: none;
+    }
+  .section_subtittle{
+    display: none;
+  }
+        
+  }  
+  
+  @media screen and (max-width: 576px) {
+    .c{
+        display: none;
+    }
+    .about_info{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .about_description{
+        padding: 0;
+    }
+  }
+  
+  /* For small devices */
+  @media screen and (max-width: 350px) {
+    .c{
+        display: none;
+    }
+    .about_info{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
